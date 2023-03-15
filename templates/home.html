@@ -4,55 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jovian Careers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
   <style>
-    h1{
-      font-size:40px;
-      font-family: 'Roboto',sans-serif;
-      font-weight:normal;
-      color: rgb(100, 100, 100);
-      text-align: center;
-    }
-
-    h2{
-      font-family: 'Roboto',sans-serif;
-      font-weight:normal;
-      color: rgb(100, 100, 100);
-      text-align: center;
-    }
-
-    .bodytext {
-      font-family: 'Roboto',sans-serif;
-      color: rgb(80,80,80);
-      
-    }
-    
-    #banner{
+    #banner {
+      max-height: 360px;
       width: 100%;
-      height:325px;
       object-fit: cover;
     }
-
-    #container{
-      max-width:720px;
-      margin: 0 auto;
-    }
   </style>
+  <title>Jovian Careers</title>
 </head>
 <body>
-  <div id=container>
-    <h1>Freshers Portal</h1>
-    <img id ="banner" src="https://flaskwebdev.ayushratan3111.repl.co/static/Success.jpeg" alt="career_growth_pic" height="400px">
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Freshers Portal</h1>
+    <img id ="banner" class = "img-fluid "src="https://flaskwebdev.ayushratan3111.repl.co/static/Success.jpeg" alt="career_growth_pic" height="400px">
   
-    <h2>About Freshers Portal</h2>
+    <h2 class="text-center mt-2 mb-4">About Freshers Portal</h2>
   
-    <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc. Leo duis ut diam quam nulla. Nibh ipsum consequat nisl vel pretium. Sed sed risus pretium quam vulputate dignissim suspendisse in. Suspendisse sed nisi lacus sed viverra tellus in. Libero enim sed faucibus turpis in eu mi. Euismod nisi porta lorem mollis. Ac felis donec et odio pellentesque diam volutpat commodo sed. Ornare quam viverra orci sagittis. Senectus et netus et malesuada. Vulputate dignissim suspendisse in est ante in nibh.</p>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc. Leo duis ut diam quam nulla. Nibh ipsum consequat nisl vel pretium. Sed sed risus pretium quam vulputate dignissim suspendisse in. Suspendisse sed nisi lacus sed viverra tellus in. Libero enim sed faucibus turpis in eu mi. Euismod nisi porta lorem mollis. Ac felis donec et odio pellentesque diam volutpat commodo sed. Ornare quam viverra orci sagittis. Senectus et netus et malesuada. Vulputate dignissim suspendisse in est ante in nibh.</p>
   
-    <h2>Open Positions</h2>
-    <p class="bodytext">TODO-Show the jobs here</p>
-    <div style="text-align:center">
-      <button>Contact Us</button>
-      <p>Copyright FP, 2022</p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <p class="mb-4">TODO-Show the jobs here</p>
+    <div>
+    {% for job in jobs %}
+      {% include "jobitem.html" %}
+    {% endfor %}
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary btn-large">Contact Us</button>
+      <p class="mt-4">Copyright FP, 2022</p>
     </div>
   </div>  
 </body>
