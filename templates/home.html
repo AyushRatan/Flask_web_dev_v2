@@ -11,19 +11,26 @@
       max-height: 360px;
       width: 100%;
       object-fit: cover;
+      padding-bottom:16px;
     }
   </style>
   <title>Jovian Careers</title>
 </head>
 <body>
+  {% include "navbar.html" %}
+  <img id ="banner" class = "img-fluid "src="https://flaskwebdev.ayushratan3111.repl.co/static/Success.jpeg" alt="career_growth_pic" height="400px">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">Freshers Portal</h1>
-    <img id ="banner" class = "img-fluid "src="https://flaskwebdev.ayushratan3111.repl.co/static/Success.jpeg" alt="career_growth_pic" height="400px">
-  
-    <h2 class="text-center mt-2 mb-4">About Freshers Portal</h2>
-  
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc. Leo duis ut diam quam nulla. Nibh ipsum consequat nisl vel pretium. Sed sed risus pretium quam vulputate dignissim suspendisse in. Suspendisse sed nisi lacus sed viverra tellus in. Libero enim sed faucibus turpis in eu mi. Euismod nisi porta lorem mollis. Ac felis donec et odio pellentesque diam volutpat commodo sed. Ornare quam viverra orci sagittis. Senectus et netus et malesuada. Vulputate dignissim suspendisse in est ante in nibh.</p>
-  
+
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc. Leo duis ut diam quam nulla. Nibh ipsum consequat nisl vel pretium. Sed sed risus pretium quam vulputate dignissim suspendisse in. Suspendisse sed nisi lacus sed viverra tellus in. Libero enim sed faucibus turpis in eu mi. Euismod nisi porta lorem mollis. Ac felis donec et odio pellentesque diam volutpat commodo sed. Ornare quam viverra orci sagittis. Senectus et netus et malesuada. Vulputate dignissim suspendisse in est ante in nibh.</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/working.jpg" alt="working" style="height:320px; border-radius:4px; ">
+      </div>
+      
+    </div>
     <h2 class="text-center mt-2 mb-4">Job Openings</h2>
     <p class="mb-4">TODO-Show the jobs here</p>
     <div>
@@ -32,9 +39,9 @@
     {% endfor %}
     </div>
     <div class="text-center">
-      <button class="btn btn-primary btn-large">Contact Us</button>
-      <p class="mt-4">Copyright FP, 2022</p>
+      <a href="mailto:ayushratan.974@gmail.com" type="button" class="btn btn-primary btn-large">Contact Us</a>
     </div>
+    {% include "footer.html" %}
   </div>  
 </body>
 </html>
